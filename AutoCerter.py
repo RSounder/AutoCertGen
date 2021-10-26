@@ -112,9 +112,10 @@ for i in range(0, len(nametxt)):
   
   img1 = cv2.putText(img, nametxt[i], cor,font , fontscale, colour, thickness, cv2.LINE_AA)
   cv2.imwrite( destPath + str(nametxt[i])+'.jpg',img1)
-  print('A'+str(i)+'.jpg')
+  print(str(nametxt[i]) + '.jpg created')
   mailer(nametxt[i], toaddrList[i], destPath + str(nametxt[i])+'.jpg' )
   print('Mailed to ' + nametxt[i])
+  print('-----End of '+ str(i+1) +'-----')
   img = cv2.imread(imgPath)
 
 ####
